@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Acompanhante Hospitalar - Daniela</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="assets/icon-hospital.png" type="image/x-icon">
+    <link rel="icon" href="assets/icon-hospital.png" type="image/x-icon" />
   </head>
 
   <body>
@@ -32,23 +32,34 @@
         <li>
           <a
             href="javascript:void(0)"
+            onclick="abrirLightbox('./assets/precos.png')"
+            >Preços</a
+          >
+        </li>
+        <li>
+          <a
+            href="javascript:void(0)"
             onclick="abrirLightbox('./assets/certificado-unimed.jpg')"
           >
             Certificado Faculdade Unimed
           </a>
         </li>
+
         <!-- <li>
-          <a href="#" target="_blank">Link 3</a>
-        </li>
-        <li>
           <a href="#" target="_blank">Link 4</a>
         </li> -->
       </ul>
-      <footer>Feito por <a href="https://daniela-ab.github.io/cartao-virtual/" target="_blank">Daniela</a></footer>
+      <footer>
+        Feito por
+        <a href="https://daniela-ab.github.io/cartao-virtual/" target="_blank"
+          >Daniela</a
+        >
+      </footer>
     </div>
 
     <div id="lightbox" class="lightbox" onclick="fecharLightbox()">
       <img id="lightbox-img" />
+      <img id="lightbox-img-2" />
     </div>
 
     <script
