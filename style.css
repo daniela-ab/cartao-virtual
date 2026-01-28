@@ -18,11 +18,12 @@
 
 .light {
   --text-color: #061558;
-  --bg-color: #ffffff;
+  --bg-color: #c7c3c3;
   --stroke-color: rgba(6, 21, 88, 0.4);
   --surface-color: rgba(6, 21, 88, 0.08);
   --surface-color-hover: rgba(6, 21, 88, 0.2);
   --highlight-color: rgba(6, 21, 88, 0.1);
+  --switch-bg-url: url(./assets/sun.svg);
 }
 
 body {
