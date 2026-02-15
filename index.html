@@ -32,7 +32,7 @@
         <li>
           <a
             href="javascript:void(0)"
-            onclick="abrirLightbox('./assets/tabela-precos.jpg')"
+            onclick="abrirLightbox('./assets/precos.png')"
             >Preços</a
           >
         </li>
@@ -57,10 +57,14 @@
       </footer>
     </div>
 
-    <div id="lightbox" class="lightbox" onclick="fecharLightbox()">
-      <img id="lightbox-img" />
-      <img id="lightbox-img-2" />
-    </div>
+   <div id="lightbox" class="lightbox">
+  <div class="lightbox-content">
+    <span class="fechar" onclick="fecharLightbox()">&times;</span>
+    <img id="lightbox-img" />
+  </div>
+</div>
+
+
 
     <script
       type="module"
