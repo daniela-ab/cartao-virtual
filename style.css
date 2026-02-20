@@ -5,66 +5,15 @@
 }
 
 :root {
-  --gold: #E8A820;
+  --gold: #e8a820;
   --gold-light: #f0c040;
   --gold-dim: rgba(232, 168, 32, 0.18);
   --gold-border: rgba(232, 168, 32, 0.45);
   --gold-hover: rgba(232, 168, 32, 0.32);
   --blue-deep: #0f1f8a;
   --text-main: #ffffff;
-  --text-gold: #E8A820;
+  --text-gold: #e8a820;
   --bg: #0f1f8a;
-}
-
-.light {
-  --gold: #1533c0;
-  --gold-light: #1e3fd4;
-  --gold-dim: rgba(21, 51, 192, 0.08);
-  --gold-border: rgba(21, 51, 192, 0.3);
-  --gold-hover: rgba(21, 51, 192, 0.14);
-  --blue-deep: #1533c0;
-  --text-main: #0a1660;
-  --text-gold: #1533c0;
-  --bg: #f2f2f4;
-}
-
-.light body {
-  background: #f2f2f4;
-}
-
-.light body::before {
-  background:
-    radial-gradient(ellipse at 20% 10%, rgba(21, 51, 192, 0.05) 0%, transparent 50%),
-    radial-gradient(ellipse at 80% 80%, rgba(21, 51, 192, 0.07) 0%, transparent 60%);
-}
-
-.light .stars {
-  display: none;
-}
-
-.light #profile img {
-  box-shadow: 0 0 0 6px rgba(21, 51, 192, 0.1), 0 8px 32px rgba(0,0,0,0.1);
-}
-
-.light ul li a {
-  background: #ffffff;
-  border-color: rgba(21, 51, 192, 0.3);
-  box-shadow: 0 2px 12px rgba(21, 51, 192, 0.07);
-}
-
-.light ul li a:hover {
-  background: rgba(21, 51, 192, 0.06);
-  border-color: rgba(21, 51, 192, 0.5);
-  box-shadow: 0 4px 20px rgba(21, 51, 192, 0.12);
-}
-
-.light #switch-track {
-  background: rgba(21, 51, 192, 0.1);
-  border-color: rgba(21, 51, 192, 0.3);
-}
-
-.light #profile .role-badge {
-  color: #ffffff;
 }
 
 body {
@@ -76,12 +25,20 @@ body {
 }
 
 body::before {
-  content: '';
+  content: "";
   position: fixed;
   inset: 0;
   background:
-    radial-gradient(ellipse at 20% 10%, rgba(232, 168, 32, 0.08) 0%, transparent 50%),
-    radial-gradient(ellipse at 80% 80%, rgba(21, 51, 192, 0.4) 0%, transparent 60%);
+    radial-gradient(
+      ellipse at 20% 10%,
+      rgba(232, 168, 32, 0.08) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      ellipse at 80% 80%,
+      rgba(21, 51, 192, 0.4) 0%,
+      transparent 60%
+    );
   pointer-events: none;
   z-index: 0;
 }
@@ -126,9 +83,11 @@ body * {
   object-fit: cover;
   border-radius: 50%;
   border: 3px solid var(--gold);
-  box-shadow: 0 0 0 6px rgba(232, 168, 32, 0.12), 0 8px 32px rgba(0,0,0,0.4);
+  box-shadow:
+    0 0 0 6px rgba(232, 168, 32, 0.12),
+    0 8px 32px rgba(0, 0, 0, 0.4);
   margin-bottom: 16px;
-  background: rgba(232,168,32,0.1);
+  background: rgba(232, 168, 32, 0.1);
 }
 
 #profile .name {
@@ -179,58 +138,6 @@ body * {
   border-radius: 999px;
 }
 
-/* ---- Switch ---- */
-
-#switch {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 24px;
-  cursor: pointer;
-  user-select: none;
-}
-
-
-#switch-track {
-  position: relative;
-  width: 64px;
-  height: 32px;
-  background: var(--gold-dim);
-  border: 1px solid var(--gold-border);
-  border-radius: 9999px;
-  backdrop-filter: blur(4px);
-  transition: background 0.3s;
-}
-
-#switch-thumb {
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  width: 26px;
-  height: 26px;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.12);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 16px;
-  line-height: 1;
-  transition: left 0.25s cubic-bezier(.4,0,.2,1), background 0.3s;
-}
-
-.light #switch-thumb {
-  left: 34px;
-  background: rgba(21, 51, 192, 0.15);
-}
-
-.light footer {
-  color: rgba(21, 51, 192, 0.5);
-}
-
-.light footer a {
-  color: rgba(21, 51, 192, 0.7);
-}
-
 /* ---- Links ---- */
 
 ul {
@@ -255,7 +162,11 @@ ul li a {
   font-size: 0.95rem;
   letter-spacing: 0.03em;
   color: var(--text-gold);
-  transition: background 0.2s, border-color 0.2s, transform 0.15s, box-shadow 0.2s;
+  transition:
+    background 0.2s,
+    border-color 0.2s,
+    transform 0.15s,
+    box-shadow 0.2s;
 }
 
 ul li a:hover {
@@ -268,7 +179,6 @@ ul li a:hover {
 ul li a:active {
   transform: translateY(0);
 }
-
 
 /* ---- Lightbox ---- */
 
@@ -330,7 +240,9 @@ ul li a:active {
   align-items: center;
   justify-content: center;
   z-index: 10000;
-  transition: background 0.2s, transform 0.15s;
+  transition:
+    background 0.2s,
+    transform 0.15s;
   line-height: 1;
 }
 
@@ -361,13 +273,31 @@ footer a:hover {
 /* ---- Animations ---- */
 
 @keyframes fadeUp {
-  from { opacity: 0; transform: translateY(16px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-#profile { animation: fadeUp 0.5s ease both; }
-#switch  { animation: fadeUp 0.5s 0.1s ease both; }
-ul li:nth-child(1) a { animation: fadeUp 0.5s 0.15s ease both; }
-ul li:nth-child(2) a { animation: fadeUp 0.5s 0.22s ease both; }
-ul li:nth-child(3) a { animation: fadeUp 0.5s 0.29s ease both; }
-footer { animation: fadeUp 0.5s 0.35s ease both; }
+#profile {
+  animation: fadeUp 0.5s ease both;
+}
+#switch {
+  animation: fadeUp 0.5s 0.1s ease both;
+}
+ul li:nth-child(1) a {
+  animation: fadeUp 0.5s 0.15s ease both;
+}
+ul li:nth-child(2) a {
+  animation: fadeUp 0.5s 0.22s ease both;
+}
+ul li:nth-child(3) a {
+  animation: fadeUp 0.5s 0.29s ease both;
+}
+footer {
+  animation: fadeUp 0.5s 0.35s ease both;
+}
