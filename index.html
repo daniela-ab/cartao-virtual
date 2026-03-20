@@ -1,59 +1,79 @@
 <!doctype html>
 <html lang="pt-br" class="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Acompanhante Hospitalar - Daniela</title>
+    <link rel="icon" href="assets/icon-hospital.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700&family=DM+Sans:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Acompanhante Hospitalar - Daniela</title>
-  <link rel="icon" href="assets/icon-hospital.png" type="image/png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700&family=DM+Sans:wght@400;500;600&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
-</head>
+  <body>
+    <div class="stars">✦ ✧ ✦ ✧ ✦ ✧ ✦ ✧ ✦</div>
 
-<body>
-  <div class="stars">✦ ✧ ✦ ✧ ✦ ✧ ✦ ✧ ✦</div>
+    <div id="container">
+      <div id="profile">
+        <img src="assets/dani.jfif" alt="Foto de Daniela Alves Barbosa" />
+        <p class="name">Daniela<br />Alves Barbosa</p>
+        <span class="role-badge">Acompanhante Hospitalar</span>
+        <p class="periodo">Período Noturno</p>
+      </div>
 
-  <div id="container">
-    <div id="profile">
-      <img src="assets/dani.jfif" alt="Foto de Daniela Alves Barbosa" />
-      <p class="name">Daniela<br />Alves Barbosa</p>
-      <span class="role-badge">Acompanhante Hospitalar</span>
-      <p class="periodo">Período Noturno</p>
+      <ul>
+        <li>
+          <a
+            href="https://wa.me/5511935364806?text=Ol%C3%A1,%20gostaria%20de%20saber%20mais%20sobre%20o%20servi%C3%A7o%20de%20Acompanhante%20Hospitalar"
+            target="_blank"
+          >
+            WhatsApp
+          </a>
+        </li>
+      </ul>
+      <div id="profile2">
+        <p class="certificados">Certificados</p>
+      </div>
+      <ul>
+        <li>
+          <a
+            href="javascript:void(0)"
+            onclick="abrirLightbox('assets/certificado-unimed.jpg')"
+          >
+            Cuidadores de Idosos
+          </a>
+        </li>
+        <li>
+          <a
+            href="javascript:void(0)"
+            onclick="abrirLightbox('assets/avasus1.jpg')"
+          >
+            Síndromes Geriátricas e Cuidados Paliativos
+          </a>
+        </li>
+      </ul>
+
+      <footer>
+        Feito por
+        <a href="https://daniela-ab.github.io/cartao-virtual/" target="_blank"
+          >Daniela</a
+        >
+      </footer>
     </div>
 
-    <ul>
-      <li>
-        <a href="https://wa.me/5511935364806?text=Ol%C3%A1,%20gostaria%20de%20saber%20mais%20sobre%20o%20servi%C3%A7o%20de%20Acompanhante%20Hospitalar"
-          target="_blank">
-          WhatsApp
-        </a>
-      </li>
-      <li>
-        <a href="javascript:void(0)" onclick="abrirLightbox('assets/certificado-unimed.jpg')">
-          Certificado Faculdade Unimed
-        </a>
-      </li>
-    </ul>
-
-    <footer>
-      Feito por
-      <a href="https://daniela-ab.github.io/cartao-virtual/" target="_blank">Daniela</a>
-    </footer>
-  </div>
-
-  <div id="lightbox" class="lightbox" onclick="fecharLightbox()">
-    <div class="lightbox-inner" onclick="event.stopPropagation()">
-      <button id="lightbox-close" onclick="fecharLightbox()" title="Fechar">
-        ✕
-      </button>
-      <img id="lightbox-img" />
+    <div id="lightbox" class="lightbox" onclick="fecharLightbox()">
+      <div class="lightbox-inner" onclick="event.stopPropagation()">
+        <button id="lightbox-close" onclick="fecharLightbox()" title="Fechar">
+          ✕
+        </button>
+        <img id="lightbox-img" />
+      </div>
     </div>
-  </div>
 
-  <script src="script.js"></script>
-</body>
-
+    <script src="script.js"></script>
+  </body>
 </html>

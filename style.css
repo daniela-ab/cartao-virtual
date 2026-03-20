@@ -77,6 +77,11 @@ body * {
   padding: 32px 24px 24px;
 }
 
+#profile2 {
+  text-align: center;
+  padding: 10px 10px 10px 10px;
+}
+
 #profile img {
   width: 108px;
   height: 108px;
@@ -106,8 +111,8 @@ body * {
   background: var(--gold);
   color: #0a1660;
   font-family: "DM Sans", sans-serif;
-  font-weight: 700;
-  font-size: 0.68rem;
+  font-weight: 900;
+  font-size: 0.72rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   padding: 5px 16px;
@@ -116,7 +121,7 @@ body * {
   color: #0a1660;
 }
 
-#profile .periodo {
+.periodo {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -130,12 +135,21 @@ body * {
   margin-top: 8px;
 }
 
-.divider {
-  width: 48px;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, var(--gold), transparent);
-  margin: 20px auto;
-  border-radius: 999px;
+
+
+.certificados {
+  display: inline-block;
+  background: var(--gold);
+  color: #0a1660;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 900;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 5px 16px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  color: #0a1660;
 }
 
 /* ---- Links ---- */
