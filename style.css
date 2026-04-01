@@ -210,9 +210,9 @@ ul li a:active {
   align-items: center;
   opacity: 0;
   transition: opacity 0.3s ease;
-  overflow: auto;
-  touch-action: pan-x pan-y pinch-zoom;
-  pointer-events: none; /* não captura toques — deixa o pan nativo funcionar */
+  /* impede zoom nativo da página */
+  touch-action: none;
+  user-select: none;
 }
 
 .lightbox.show {
@@ -223,8 +223,7 @@ ul li a:active {
 .lightbox-inner {
   position: relative;
   display: inline-flex;
-  touch-action: pan-x pan-y pinch-zoom;
-  pointer-events: all; /* o conteúdo continua clicável */
+  touch-action: none;
 }
 
 .lightbox img {
@@ -232,11 +231,16 @@ ul li a:active {
   max-height: 90vh;
   border-radius: 8px;
   box-shadow: 0 0 40px rgba(232, 168, 32, 0.2);
-  transform: scale(0.85);
-  transition: transform 0.3s ease;
   border: 1px solid rgba(232, 168, 32, 0.3);
   display: block;
-  touch-action: pan-x pan-y pinch-zoom;
+  transform-origin: center center;
+  transform: scale(0.85);
+  transition: transform 0.3s ease;
+  touch-action: none;
+  user-select: none;
+  /* evita que arrastar a imagem abra o menu de contexto no mobile */
+  -webkit-user-drag: none;
+  pointer-events: none;
 }
 
 .lightbox.show img {
@@ -260,11 +264,8 @@ ul li a:active {
   align-items: center;
   justify-content: center;
   z-index: 10000;
-  transition:
-    background 0.2s,
-    transform 0.15s;
+  transition: background 0.2s, transform 0.15s;
   line-height: 1;
-  pointer-events: all;
 }
 
 #lightbox-close:hover {
