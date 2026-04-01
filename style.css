@@ -48,80 +48,6 @@ body::before {
   z-index: 0;
 }
 
-/* ---- Lightbox ---- */
-
-.lightbox {
-  display: none;
-  position: fixed;
-  z-index: 9999;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.85);
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  /* permite scroll/pan quando a imagem está com zoom */
-  overflow: auto;
-  touch-action: pan-x pan-y pinch-zoom;
-}
-
-.lightbox.show {
-  display: flex;
-  opacity: 1;
-}
-
-.lightbox-inner {
-  position: relative;
-  /* sem max-width/max-height para a imagem poder crescer com o zoom */
-  display: inline-flex;
-  touch-action: pan-x pan-y pinch-zoom;
-}
-
-.lightbox img {
-  max-width: 90vw;
-  max-height: 90vh;
-  border-radius: 8px;
-  box-shadow: 0 0 40px rgba(232, 168, 32, 0.2);
-  transform: scale(0.85);
-  transition: transform 0.3s ease;
-  border: 1px solid rgba(232, 168, 32, 0.3);
-  display: block;
-  touch-action: pan-x pan-y pinch-zoom;
-}
-
-.lightbox.show img {
-  transform: scale(1);
-}
-
-/* Botão fixo na viewport, não sofre efeito do zoom */
-#lightbox-close {
-  position: fixed;
-  top: 12px;
-  left: 12px;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  background: rgba(0, 0, 0, 0.6);
-  border: none;
-  color: #ffffff;
-  font-size: 16px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 10000;
-  transition: background 0.2s, transform 0.15s;
-  line-height: 1;
-}
-
-#lightbox-close:hover {
-  background: rgba(0, 0, 0, 0.85);
-  transform: scale(1.1);
-}
-
 .stars {
   position: fixed;
   top: 14px;
@@ -197,7 +123,6 @@ body * {
   padding: 5px 16px;
   border-radius: 4px;
   margin-bottom: 10px;
-  color: #0a1660;
 }
 
 .periodo {
@@ -226,7 +151,6 @@ body * {
   padding: 5px 16px;
   border-radius: 4px;
   margin-bottom: 10px;
-  color: #0a1660;
 }
 
 /* ---- Links ---- */
@@ -286,6 +210,9 @@ ul li a:active {
   align-items: center;
   opacity: 0;
   transition: opacity 0.3s ease;
+  overflow: auto;
+  touch-action: pan-x pan-y pinch-zoom;
+  pointer-events: none; /* não captura toques — deixa o pan nativo funcionar */
 }
 
 .lightbox.show {
@@ -293,8 +220,15 @@ ul li a:active {
   opacity: 1;
 }
 
+.lightbox-inner {
+  position: relative;
+  display: inline-flex;
+  touch-action: pan-x pan-y pinch-zoom;
+  pointer-events: all; /* o conteúdo continua clicável */
+}
+
 .lightbox img {
-  max-width: 100%;
+  max-width: 90vw;
   max-height: 90vh;
   border-radius: 8px;
   box-shadow: 0 0 40px rgba(232, 168, 32, 0.2);
@@ -302,30 +236,25 @@ ul li a:active {
   transition: transform 0.3s ease;
   border: 1px solid rgba(232, 168, 32, 0.3);
   display: block;
+  touch-action: pan-x pan-y pinch-zoom;
 }
 
 .lightbox.show img {
   transform: scale(1);
 }
 
-.lightbox-inner {
-  position: relative;
-  max-width: 90vw;
-  max-height: 90vh;
-  display: inline-flex;
-}
-
+/* Botão fixo na viewport — não sofre efeito do zoom */
 #lightbox-close {
-  position: absolute;
-  top: -14px;
-  left: -14px;
-  width: 28px;
-  height: 28px;
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
-  background: rgba(0, 0, 0, 0.45);
+  background: rgba(0, 0, 0, 0.6);
   border: none;
   color: #ffffff;
-  font-size: 14px;
+  font-size: 16px;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -335,10 +264,11 @@ ul li a:active {
     background 0.2s,
     transform 0.15s;
   line-height: 1;
+  pointer-events: all;
 }
 
 #lightbox-close:hover {
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.85);
   transform: scale(1.1);
 }
 
