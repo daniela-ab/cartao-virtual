@@ -16,7 +16,8 @@
   --bg: #0f1f8a;
 }
 
-html, body {
+html,
+body {
   overscroll-behavior: none;
 }
 
@@ -45,6 +46,14 @@ body::before {
     );
   pointer-events: none;
   z-index: 0;
+}
+
+.lightbox-inner {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: inline-flex;
+  touch-action: pinch-zoom; /* zoom isolado dentro do lightbox */
 }
 
 .stars {
@@ -138,8 +147,6 @@ body * {
   opacity: 0.85;
   margin-top: 8px;
 }
-
-
 
 .certificados {
   display: inline-block;
