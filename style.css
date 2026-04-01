@@ -16,6 +16,10 @@
   --bg: #0f1f8a;
 }
 
+html, body {
+  overscroll-behavior: none;
+}
+
 body {
   background: var(--bg);
   min-height: 100vh;
