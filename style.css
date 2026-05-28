@@ -168,6 +168,7 @@ ul li a {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   gap: 10px;
   background: var(--gold-dim);
   border: 1px solid var(--gold-border);
@@ -177,6 +178,7 @@ ul li a {
   font-size: 0.95rem;
   letter-spacing: 0.03em;
   color: var(--text-gold);
+  text-align: center;
   transition:
     background 0.2s,
     border-color 0.2s,
